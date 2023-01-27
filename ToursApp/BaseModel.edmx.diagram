@@ -17,6 +17,7 @@
         <AssociationConnector Association="TourBaseModel.FK_Hotelimage_Hotel" ManuallyRouted="false" />
         <AssociationConnector Association="TourBaseModel.HotelOfTour" ManuallyRouted="false" />
         <AssociationConnector Association="TourBaseModel.TypeOfTour" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TourBaseModel.Client" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

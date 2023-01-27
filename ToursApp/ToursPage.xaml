@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ToursApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ToursPage">
+      Title="Список туров">
 
     <Grid>
         <Grid.RowDefinitions>

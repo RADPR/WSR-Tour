@@ -73,6 +73,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>

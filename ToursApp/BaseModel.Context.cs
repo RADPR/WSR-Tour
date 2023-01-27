@@ -22,13 +22,14 @@ namespace ToursApp
         {
         }
 
+
         public static TourBaseEntities GetContext()
         {
             if (_context == null)
                 _context = new TourBaseEntities();
             return _context;
         }
-        
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -41,5 +42,6 @@ namespace ToursApp
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }
         public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
     }
 }

@@ -20,18 +20,21 @@ namespace ToursApp
     /// </summary>
     public partial class MenuPage : Page
     {
+        
         public MenuPage()
         {
             InitializeComponent();
-            
+
         }
 
         private void Tour_Click(object sender, RoutedEventArgs e)
         {
+            Manager.MainFrame.Navigate(new ToursPage());
         }
 
         private void Hotel_Click(object sender, RoutedEventArgs e)
         {
+            Manager.MainFrame.Navigate(new HotelsPage());
         }
     }
 }
