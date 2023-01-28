@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ToursApp.AutorizationPages;
 
 namespace ToursApp
 {
@@ -21,16 +22,26 @@ namespace ToursApp
     {
         public AutorizationWindow()
         {
-            
             InitializeComponent();
+            MainFrame.Navigate(new MenuAutorization());
+            Manager.MainFrame = MainFrame;
         }
 
-        private void Avtorizacia_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            this.Close();
-            mainWindow.Show();
-            MessageBox.Show("Вы успешно прошли авторизацию");   
+            Manager.MainFrame.GoBack();
+        }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                BtnBack.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnBack.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
