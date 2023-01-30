@@ -11,4 +11,8 @@ namespace ToursApp
     {
         public static Frame MainFrame { get; set; }
     }
+    class Manager2
+    {
+        public static Frame MainFrame { get; set; }
+    }
 }

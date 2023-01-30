@@ -28,12 +28,12 @@ namespace ToursApp.AutorizationPages
 
         private void Registr_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new Registr());
+            Manager2.MainFrame.Navigate(new Registr());
         }
 
         private void Vhod_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new ToursPage());
+            Manager2.MainFrame.Navigate(new Vhod());
         }
     }
 }

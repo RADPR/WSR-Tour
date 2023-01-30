@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,12 +25,12 @@ namespace ToursApp
         {
             InitializeComponent();
             MainFrame.Navigate(new MenuAutorization());
-            Manager.MainFrame = MainFrame;
+            Manager2.MainFrame = MainFrame;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.GoBack();
+            Manager2.MainFrame.GoBack();
         }
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)

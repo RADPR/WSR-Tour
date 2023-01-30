@@ -71,6 +71,9 @@
     <Compile Include="AutorizationPages\Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AutorizationPages\Vhod.xaml.cs">
+      <DependentUpon>Vhod.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AutorizationPages\Registr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutorizationPages\Vhod.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
