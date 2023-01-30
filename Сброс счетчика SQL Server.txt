@@ -1,0 +1,35 @@
+DELETE FROM [TestTable]
+DBCC CHECKIDENT ('[TestTable]', RESEED, 0)
+
+
+if (CheckPass.IsChecked.Value)
+            {
+                PasscText.Text = Passc.Password; // скопируем в TextBox из PasswordBox
+                PasscText.Visibility = Visibility.Visible; // TextBox - отобразить
+                Passc.Visibility = Visibility.Hidden; // PasswordBox - скрыть
+
+
+                EnPasscText.Text = EnPassc.Password; // скопируем в TextBox из PasswordBox
+                EnPasscText.Visibility = Visibility.Visible; // TextBox - отобразить
+                EnPassc.Visibility = Visibility.Hidden; // PasswordBox - скрыть
+
+            }
+            else
+            {
+                Passc.Password = PasscText.Text; // скопируем в PasswordBox из TextBox 
+                PasscText.Visibility = Visibility.Hidden; // TextBox - скрыть
+                Passc.Visibility = Visibility.Visible; // PasswordBox - отобразить
+
+                EnPassc.Password = EnPasscText.Text; // скопируем в PasswordBox из TextBox 
+                EnPasscText.Visibility = Visibility.Hidden; // TextBox - скрыть
+                EnPassc.Visibility = Visibility.Visible; // PasswordBox - отобразить
+            }
+
+
+
+<PasswordBox x:Name="Passc" Grid.Column="1" Grid.Row="4" Margin="5" Height="30" Width="250" HorizontalAlignment="Left"></PasswordBox>
+        <TextBox x:Name="PasscText" Grid.Column="1" Grid.Row="4" Margin="5" Height="30" Width="250" HorizontalAlignment="Left" Visibility="Hidden"></TextBox>
+
+        <TextBlock Text="Подтвердите пароль" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <PasswordBox x:Name="EnPassc" Grid.Column="1" Grid.Row="5" Margin="5" Height="30" Width="250" HorizontalAlignment="Left"></PasswordBox>
+        <TextBox x:Name="EnPasscText" Grid.Column="1" Grid.Row="5" Margin="5" Height="30" Width="250" HorizontalAlignment="Left" Visibility="Hidden"></TextBox>
