@@ -50,7 +50,7 @@ namespace ToursApp.AutorizationPages
         {
             var currentClient = TourBaseEntities.GetContext().Clients.ToList();
             StringBuilder errors = new StringBuilder();
-            errors.AppendLine("asdasd");
+            
             currentClient = currentClient.Where(p => p.Login.ToLower() == Loginc.Text.ToLower()).ToList();
 
             
