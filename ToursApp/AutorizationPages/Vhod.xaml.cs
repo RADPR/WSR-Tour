@@ -27,7 +27,7 @@ namespace ToursApp.AutorizationPages
         {
             InitializeComponent();
             DataContext = _currentClient;
-           
+
         }
 
         private void CheckPass_Click(object sender, RoutedEventArgs e)
@@ -63,7 +63,7 @@ namespace ToursApp.AutorizationPages
                 {
                     MessageBox.Show("Вы успешно вошли!");
                     window.Close();
-                    new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
+                    //new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
                 }
                 else
                 {
@@ -74,6 +74,11 @@ namespace ToursApp.AutorizationPages
             {
                 errors.AppendLine("Аккаунт с таким логином не существует");
             }
+        }
+
+        private void BtnReg_Click(object sender, RoutedEventArgs e)
+        {
+            window.MainFrame.Navigate(new Registr());
         }
     }
 }

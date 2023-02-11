@@ -35,5 +35,6 @@
         <CheckBox x:Name="CheckbPass"  Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="CheckPass_Click" Margin="0,0,20,0"></CheckBox>
 
         <Button Content="Войти" Grid.Column="1" Grid.Row="6" Name="BtnSave" Click="BtnSave_Click"></Button>
+        <Button Content="Регистрация" Grid.Column="0" Grid.Row="6" Name="BtnReg" Click="BtnReg_Click"></Button>
     </Grid>
 </Page>

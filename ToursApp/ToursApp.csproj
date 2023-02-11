@@ -65,9 +65,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AutorizationPages\MenuAutorization.xaml.cs">
-      <DependentUpon>MenuAutorization.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AutorizationPages\Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
@@ -113,10 +110,6 @@
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AutorizationPages\MenuAutorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

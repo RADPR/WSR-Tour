@@ -88,7 +88,7 @@ namespace ToursApp.AutorizationPages
                                 TourBaseEntities.GetContext().SaveChanges();
                                 MessageBox.Show("Вы зарегестрированы!");
                                 window.Close();
-                                new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
+                                //new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
                                 
                             }
                             catch (DbEntityValidationException ex)
@@ -133,5 +133,10 @@ namespace ToursApp.AutorizationPages
         && pass.Any(char.IsPunctuation)
         && pass.Any(char.IsLower)
         && pass.Any(char.IsUpper);
+
+        private void Btnvhod_Click(object sender, RoutedEventArgs e)
+        {
+            window.MainFrame.Navigate(new Vhod());
+        }
     }
 }

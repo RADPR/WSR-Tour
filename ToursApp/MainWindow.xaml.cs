@@ -21,13 +21,14 @@ namespace ToursApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(string Namec, string Surnamec, string Loginc, string Adminc)
+        //string Namec, string Surnamec, string Loginc, string Adminc
+        public MainWindow()
         {
             InitializeComponent();
             MainFrame.Navigate(new MenuPage());
             Manager.MainFrame = MainFrame;
 
-            NameText.Text = $"{Namec} \n {Surnamec}";
+            //NameText.Text = $"{Namec} \n {Surnamec}";
         }
 
         private void ImportTours()

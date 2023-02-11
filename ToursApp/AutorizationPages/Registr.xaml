@@ -48,7 +48,6 @@
 
         <Button Content="Зарегестрироваться" Grid.Column="1" Grid.Row="6" Name="BtnSave" Click="BtnSave_Click"></Button>
 
-
-
+        <Button Content="Войти" Grid.Column="0" Grid.Row="6" Name="Btnvhod" Click="Btnvhod_Click"></Button>
     </Grid>
 </Page>
