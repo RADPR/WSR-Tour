@@ -21,15 +21,14 @@ namespace ToursApp.AutorizationPages
     public partial class Vhod : Page
     {
         private Client _currentClient = new Client();
-        AutorizationWindow window = new AutorizationWindow();
+        private Window windowAuto;
 
-        public Vhod()
+        public Vhod(Window window1)
         {
             InitializeComponent();
             DataContext = _currentClient;
-
+            windowAuto = window1;
         }
-
         private void CheckPass_Click(object sender, RoutedEventArgs e)
         {//Показать скрыть пароль
             if (CheckbPass.IsChecked.Value)
@@ -62,8 +61,8 @@ namespace ToursApp.AutorizationPages
                 if (PasscText.Text == _currentClient.Password)
                 {
                     MessageBox.Show("Вы успешно вошли!");
-                    window.Close();
-                    //new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
+                    windowAuto.Hide();
+                    new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
                 }
                 else
                 {
@@ -74,11 +73,17 @@ namespace ToursApp.AutorizationPages
             {
                 errors.AppendLine("Аккаунт с таким логином не существует");
             }
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString());
+                return;
+            }
         }
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
-            window.MainFrame.Navigate(new Registr());
+            Manager.MainFrame.Navigate(new Registr(windowAuto));
         }
     }
 }

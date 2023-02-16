@@ -24,7 +24,8 @@ namespace ToursApp
         public AutorizationWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Vhod());
+            MainFrame.Navigate(new Vhod(this));
+            Manager.MainFrame = MainFrame;
         }
     }
 }

@@ -22,13 +22,12 @@ namespace ToursApp.AutorizationPages
     public partial class Registr : Page
     {
         private Client _currentClient = new Client();
-        AutorizationWindow window = new AutorizationWindow();
-
-        public Registr()
+        private Window windowAuto;
+        public Registr(Window window1)
         {
             InitializeComponent();
             DataContext = _currentClient;
-
+            windowAuto = window1;
         }
 
         private void CheckPass_Click(object sender, RoutedEventArgs e)
@@ -87,9 +86,8 @@ namespace ToursApp.AutorizationPages
                             {
                                 TourBaseEntities.GetContext().SaveChanges();
                                 MessageBox.Show("Вы зарегестрированы!");
-                                window.Close();
-                                //new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
-                                
+                                new MainWindow(_currentClient.Name_Client, _currentClient.Surname_Client, _currentClient.Login, _currentClient.Admin_Right).ShowDialog();
+                                windowAuto.Hide();
                             }
                             catch (DbEntityValidationException ex)
                             {
@@ -136,7 +134,7 @@ namespace ToursApp.AutorizationPages
 
         private void Btnvhod_Click(object sender, RoutedEventArgs e)
         {
-            window.MainFrame.Navigate(new Vhod());
+            Manager.MainFrame.Navigate(new Vhod(windowAuto));
         }
     }
 }
